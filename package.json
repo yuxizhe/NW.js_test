@@ -1,0 +1,6 @@
+{
+  "name": "helloworld",
+  "main": "index.html",
+"bg-script": "server.js"
+
+}
