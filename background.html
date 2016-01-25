@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>dfad</title>
+  </head>
+  <body>
+    
+  </body>
+  <script>
+    var windowObjectReference;
+  var strWindowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
+
+  function openRequestedPopup() {
+      windowObjectReference = window.open("http://www.baidu.com/", "CNN_WindowName", strWindowFeatures)
+}
+    
+nw.Window.get(opener).on('new-win-policy', function(frame, url, policy) {
+    // do not open the window
+    policy.ignore();
+    // and open it in external browser
+    nw.Shell.openExternal(url);
+});
+alert("asdfasdfas");
+
+
+
+	
+  /* function startServer() {
+    chrome.extension.getBackgroundPage().startServer();
+  }*/
+  
+
+
+
+
+  </script>
+</html>
